@@ -555,7 +555,8 @@ case "$1" in
         ;;
 
     'start')
-        checkUser touchlock $1 $INSTANCE
+    #       commented for openshift compatibily
+    #        checkUser touchlock $1 $INSTANCE
         start
         ;;
 
@@ -567,7 +568,8 @@ case "$1" in
         ;;
 
     'stop')
-        checkUser "" $1 $INSTANCE
+    #       commented for openshift compatibily
+    #        checkUser "" $1 $INSTANCE
         stopit
         ;;
 
