@@ -30,6 +30,11 @@ ENV PATH $PATH:/opt/apacheds-$APACHEDSVER/bin
 # Copy Scripts
 COPY initds.sh /usr/local/sbin/
 
+# Change default apache ds script
+COPY apacheds-script /opt/apacheds-$APACHEDSVER/bin/
+RUN mv /opt/apacheds-$APACHEDSVER/bin/apacheds /opt/apacheds-$APACHEDSVER/bin/apacheds.bak \
+    && mv /opt/apacheds-$APACHEDSVER/bin/apacheds-script /opt/apacheds-$APACHEDSVER/bin/apacheds
+
 # Copy Admin Password change template
 COPY admin_password.ldif /tmp/
 
