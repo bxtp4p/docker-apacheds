@@ -8,7 +8,7 @@ ENV APACHEDSVER 2.0.0-M23
 RUN apt-get update && apt-get install -y ldap-utils wget  && rm -rf /var/lib/apt/lists/*
 
 # Create apacheds user
-RUN useradd  -u 1000 -U -s /bin/bash apacheds
+RUN useradd -U -s /bin/bash apacheds
 
 
 # Download apacheds debian installer and run it
