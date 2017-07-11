@@ -1,3 +1,5 @@
+NB : this branch is set up to correct problems encountered in deployment to openshift as stated in Issue#1
+
 docker-apacheds
 ===============
 A docker image to run [Apache directory Server](http://directory.apache.org/apacheds/)
